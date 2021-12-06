@@ -18,6 +18,7 @@ public class Controller extends HttpServlet {
     String create = "views/create.jsp";
     String show = "views/show.jsp";
     String edit = "views/edit.jsp";
+    String exportar = "views/excel.jsp";
     Persona p = new Persona();
     PersonaDAO dao = new PersonaDAO();
     /**
@@ -80,6 +81,8 @@ public class Controller extends HttpServlet {
           p.setId(id);
           dao.eliminarPersona(id);
           acceso= index;
+        }else if(accion.equalsIgnoreCase("exportar")){
+            acceso = exportar;
         }
         
         RequestDispatcher vista = request.getRequestDispatcher(acceso);
@@ -122,6 +125,8 @@ public class Controller extends HttpServlet {
             dao.actualizarPersona(p);
             request.setAttribute("idper", request.getParameter("id"));
             acceso = show;
+        } else if(accion.equalsIgnoreCase("importar")){
+            acceso = index;
         }
            
            RequestDispatcher vista = request.getRequestDispatcher(acceso);

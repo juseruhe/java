@@ -2,6 +2,7 @@
 package com.pagina.crud.desarollo.interfaces;
 
 import com.pagina.crud.desarrollo.models.Persona;
+import java.io.File;
 import java.util.List;
 
 public interface CRUD {
@@ -11,4 +12,6 @@ public interface CRUD {
     public boolean insertarPersona(Persona per);
     public boolean actualizarPersona(Persona per);
     public boolean eliminarPersona(int id);
+    
+ 
 }

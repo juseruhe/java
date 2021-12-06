@@ -26,7 +26,12 @@
         <div class="row">
             <div class="col-lg-2"></div>
             <div class="col-lg-8">
-                 <a class="my-4 btn btn-success" href="Controller?accion=create"> Nueva Persona  <i class="bi bi-plus-circle"></i></a>
+                 <a class="my-4  btn btn-success " href="Controller?accion=create"> Nueva Persona  <i class="bi bi-plus-circle"></i></a>
+                 <a class="my-4  btn btn-success " href="Controller?accion=exportar"> Exportar Personas Excel  <i class="bi bi-plus-circle"></i></a>
+                 <form method="post" action="Controlador" enctype="multipart/fomr-data">
+                     <input type="file" name="archivo" required class="my-4 btn btn-success">
+                     <button type="submit" name="accion" value="importar" class="btn btn-success" > Importar Personas Excel </button>
+                 </form>
                 <table class="table table-info">
                     <thead>
                         <tr>
