@@ -4,9 +4,33 @@
         <servlet-name>Controller</servlet-name>
         <servlet-class>com.pagina.crud.desarrollo.controllers.Controller</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ExcelController</servlet-name>
+        <servlet-class>com.pagina.crud.desarrollo.controllers.ExcelController</servlet-class>
+        <multipart-config>
+            <location>/tmp</location>
+            <max-file-size>20848820</max-file-size>
+            <max-request-size>418018841</max-request-size>
+            <file-size-threshold>1048576</file-size-threshold>
+        </multipart-config>
+    </servlet>
+    <servlet>
+        <servlet-name>ImportarControlador</servlet-name>
+        <servlet-class>com.pagina.crud.desarrollo.controllers.ImportarControlador</servlet-class>
+        
+    </servlet>
     <servlet-mapping>
         <servlet-name>Controller</servlet-name>
         <url-pattern>/Controller</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExcelController</servlet-name>
+        <url-pattern>/ExcelController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImportarControlador</servlet-name>
+        <url-pattern>/ImportarControlador</url-pattern>
+      
     </servlet-mapping>
     <session-config>
         <session-timeout>

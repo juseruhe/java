@@ -3,7 +3,9 @@ package com.pagina.crud.desarrollo.controllers;
 
 import com.pagina.crud.desarrollo.dao.PersonaDAO;
 import com.pagina.crud.desarrollo.models.Persona;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -126,6 +128,8 @@ public class Controller extends HttpServlet {
             request.setAttribute("idper", request.getParameter("id"));
             acceso = show;
         } else if(accion.equalsIgnoreCase("importar")){
+            // Crear  
+             
             acceso = index;
         }
            

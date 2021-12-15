@@ -27,11 +27,12 @@
             <div class="col-lg-2"></div>
             <div class="col-lg-8">
                  <a class="my-4  btn btn-success " href="Controller?accion=create"> Nueva Persona  <i class="bi bi-plus-circle"></i></a>
-                 <a class="my-4  btn btn-success " href="Controller?accion=exportar"> Exportar Personas Excel  <i class="bi bi-plus-circle"></i></a>
-                 <form method="post" action="Controlador" enctype="multipart/fomr-data">
+                 <a class="my-4  btn btn-success " href="Controller?accion=exportar"> Exportar Personas Excel  <i class="bi bi-plus-circle"></i></a> 
+                <form method="post" action="views/importar.jsp" enctype="multipart/form-data">
                      <input type="file" name="archivo" required class="my-4 btn btn-success">
-                     <button type="submit" name="accion" value="importar" class="btn btn-success" > Importar Personas Excel </button>
+                     <button type="submit"   class="btn btn-success" > Importar Personas Excel </button>
                  </form>
+            <!-- <a class="btn btn-success my-4" href="/ImportarControlador"> <i class="bi bi-plus-circle">   Excel Pruebas </i> </a> -->
                 <table class="table table-info">
                     <thead>
                         <tr>
