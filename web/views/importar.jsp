@@ -57,32 +57,35 @@
                  rowarrylist.add(cell);    
              }    
              cellArrayListHolder.add(rowarrylist);
+             
         }
         out.println(cellArrayListHolder);
         ArrayList rowarrylist=null;
-        PreparedStatement st=con.prepareStatement("INSERT INTO  personas(dni,nombre) VALUES(?,?) ");
+       PreparedStatement st=con.prepareStatement("INSERT INTO  personas(dni,nombre) VALUES(?,?) ");
       
-        for(int i=0;i<cellArrayListHolder.size();i++)
+        
+        for(int i=1;i<cellArrayListHolder.size();i++)
+            
         {   
-          //  rowarrylist=(ArrayList)cellArrayListHolder.get(i);
+            
+          //  if(i<cellArrayListHolder.size() ){
+            
+        rowarrylist=(ArrayList)cellArrayListHolder.get(i);
+ 
+           st.setString(1,rowarrylist.get(0).toString());
+        st.setString(2,rowarrylist.get(1).toString());                    
+     st.execute();
+       
+        //   }
+       
+             
+                 
                 
-         //  System.out.println(rowarrylist.get(i));
-              
-         // st.setString(1,rowarrylist.get(i).toString());
-        // st.setString(2,rowarrylist.get(i+1).toString());
-            
-         //  st.execute();    
-            
-           
-          //  i++;  
-            
-            for(int j=0;j<2;j++){
-                System.out.println(cellArrayListHolder.get(i).get(j));
-            }
-            
-           
-            } 
+      //  System.out.println(i);
    
+       
+         } 
+  
 }
 catch(Exception e)
 {
