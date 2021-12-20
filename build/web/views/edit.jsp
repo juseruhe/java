@@ -21,7 +21,7 @@
                 Persona p = (Persona) dao.mostrarPersona(id);
                
            %>
-        <h1 class="h1 text-center my-4">Editar Persona </h1>
+        <h1 class="h1 text-center my-4">Editar datos de  <%= p.getNombre()  %> </h1>
         </div>
             <div class="col-lg-2"></div>
         </div>
