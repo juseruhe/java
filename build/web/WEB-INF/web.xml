@@ -14,11 +14,6 @@
             <file-size-threshold>1048576</file-size-threshold>
         </multipart-config>
     </servlet>
-    <servlet>
-        <servlet-name>ImportarControlador</servlet-name>
-        <servlet-class>com.pagina.crud.desarrollo.controllers.ImportarControlador</servlet-class>
-        
-    </servlet>
     <servlet-mapping>
         <servlet-name>Controller</servlet-name>
         <url-pattern>/Controller</url-pattern>
@@ -26,11 +21,6 @@
     <servlet-mapping>
         <servlet-name>ExcelController</servlet-name>
         <url-pattern>/ExcelController</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ImportarControlador</servlet-name>
-        <url-pattern>/ImportarControlador</url-pattern>
-      
     </servlet-mapping>
     <session-config>
         <session-timeout>

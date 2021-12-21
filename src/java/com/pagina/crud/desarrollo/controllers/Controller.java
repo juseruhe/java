@@ -85,6 +85,9 @@ public class Controller extends HttpServlet {
           acceso= index;
         }else if(accion.equalsIgnoreCase("exportar")){
             acceso = exportar;
+        }else if(accion.equalsIgnoreCase("exportarPDF")){
+            dao.exportarPDF();
+            acceso= index;
         }
         
         RequestDispatcher vista = request.getRequestDispatcher(acceso);

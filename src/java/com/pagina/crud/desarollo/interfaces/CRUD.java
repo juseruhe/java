@@ -12,6 +12,7 @@ public interface CRUD {
     public boolean insertarPersona(Persona per);
     public boolean actualizarPersona(Persona per);
     public boolean eliminarPersona(int id);
+    public boolean exportarPDF();
     
  
 }
