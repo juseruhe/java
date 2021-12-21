@@ -147,10 +147,13 @@ public class PersonaDAO implements CRUD {
       
       // Reporte
       String encabezado = "Reporte de Personas\n ";
+      // Fecha del Reporte
       Date date= new Date();
-      Font fuente = new Font(Font.getFamily("ARIAL"),12,Font.BOLD);
+      
+      // ________________________________________________________
+      Font fuente = new Font(Font.getFamily("ARIAL"),28,Font.BOLD);
       Paragraph linea = new Paragraph(encabezado,fuente);
-      Paragraph fecha = new Paragraph(String.valueOf(date+"\n"+"\n"));
+      Paragraph fecha = new Paragraph(String.valueOf(date));
       PdfPTable tabla = new PdfPTable(3);
       tabla.setWidthPercentage(100);
       Document documento = new Document(PageSize.A4);
@@ -164,9 +167,9 @@ public class PersonaDAO implements CRUD {
             Logger.getLogger(PersonaDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        PdfPCell celda1 = new PdfPCell(new Paragraph("#",FontFactory.getFont("arial", 10, Font.BOLD, BaseColor.BLUE)));
-        PdfPCell celda2 = new PdfPCell(new Paragraph("DNI",FontFactory.getFont("arial", 10, Font.BOLD, BaseColor.BLUE)));
-        PdfPCell celda3 = new PdfPCell(new Paragraph("Nombre",FontFactory.getFont("arial", 10, Font.BOLD, BaseColor.BLUE)));
+        PdfPCell celda1 = new PdfPCell(new Paragraph("#",FontFactory.getFont("arial", 12, Font.BOLD, BaseColor.BLUE)));
+        PdfPCell celda2 = new PdfPCell(new Paragraph("DNI",FontFactory.getFont("arial", 12, Font.BOLD, BaseColor.BLUE)));
+        PdfPCell celda3 = new PdfPCell(new Paragraph("Nombre",FontFactory.getFont("arial", 12, Font.BOLD, BaseColor.BLUE)));
         
         documento.open();
         try {
